@@ -1,4 +1,4 @@
-package com.fleexEntregas.exception;
+package com.flexxEntregas.exception;
 
 import lombok.Getter;
 import lombok.Setter;

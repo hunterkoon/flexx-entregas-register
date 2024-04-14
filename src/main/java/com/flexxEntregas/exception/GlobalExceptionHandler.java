@@ -1,7 +1,7 @@
-package com.fleexEntregas.exception;
+package com.flexxEntregas.exception;
 
 
-import com.fleexEntregas.model.ErrorDTO;
+import com.flexxEntregas.model.ErrorDTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

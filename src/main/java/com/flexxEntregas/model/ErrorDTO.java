@@ -1,4 +1,4 @@
-package com.fleexEntregas.model;
+package com.flexxEntregas.model;
 
 import lombok.Getter;
 import lombok.Setter;

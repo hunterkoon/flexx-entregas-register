@@ -1,4 +1,4 @@
-package com.fleexEntregas;
+package com.flexxEntregas;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
