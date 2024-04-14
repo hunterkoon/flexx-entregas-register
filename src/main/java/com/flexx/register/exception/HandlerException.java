@@ -1,4 +1,4 @@
-package com.flexxEntregas.exception;
+package com.flexx.register.exception;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -19,11 +19,7 @@ public class HandlerException extends RuntimeException {
 
     public HandlerException(String message, Throwable cause) {
         super(message, cause);
-        if (cause.getMessage().contains("duplicate key")) {
-            throw new HandlerException("Registro já foi inserido anteriormente", message, cause);
-        } else {
-            throw new HandlerException(message, cause);
-        }
+            //TODO IMPLEMENTAR LOGICA DE EXCEÇÃO
     }
 
     public HandlerException(String message, String details, Throwable cause) {

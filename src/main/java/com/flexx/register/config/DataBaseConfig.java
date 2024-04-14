@@ -1,7 +1,7 @@
-package com.flexxEntregas.config;
+package com.flexx.register.config;
 
 
-import com.flexxEntregas.exception.HandlerException;
+import com.flexx.register.exception.HandlerException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.jdbc.DataSourceBuilder;

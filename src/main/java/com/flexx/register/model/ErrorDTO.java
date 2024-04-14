@@ -1,4 +1,4 @@
-package com.flexxEntregas.model;
+package com.flexx.register.model;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -13,9 +13,15 @@ public class ErrorDTO {
     private HttpStatus status;
     private String message;
     private String details;
+
     public ErrorDTO(HttpStatus status, String message, String details) {
         this.status = status;
         this.message = message;
         this.details = details;
+    }
+
+    public ErrorDTO(HttpStatus status, String message) {
+        this.status = status;
+        this.message = message;
     }
 }
