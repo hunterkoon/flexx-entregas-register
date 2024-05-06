@@ -32,4 +32,10 @@ public class UserEntity implements Serializable {
     @Column
     private String password;
 
+    @Column
+    private String email;
+
+    @Column
+    private String phoneNumber;
+
 }
