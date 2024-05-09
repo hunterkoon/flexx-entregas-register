@@ -1,7 +1,6 @@
 package com.flexx.register.config;
 
 
-import com.flexx.register.exception.HandlerException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.jdbc.DataSourceBuilder;
@@ -9,7 +8,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import javax.sql.DataSource;
-import java.sql.SQLException;
 
 @Configuration
 @Slf4j
@@ -27,7 +25,7 @@ public class DataBaseConfig {
     private String driverName;
 
     @Bean
-    public DataSource dataSource() throws SQLException {
+    public DataSource dataSource() throws Exception {
         try {
             DataSourceBuilder<?> dataSourceBuilder = DataSourceBuilder.create();
             dataSourceBuilder.driverClassName(driverName);
@@ -37,7 +35,7 @@ public class DataBaseConfig {
             return dataSourceBuilder.build();
         } catch (Exception ex) {
             log.error(ERROR);
-            throw new HandlerException(ERROR, ex);
+            throw new Exception(ERROR, ex);
         }
 
     }
