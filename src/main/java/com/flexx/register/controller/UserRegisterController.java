@@ -2,6 +2,7 @@ package com.flexx.register.controller;
 
 import com.flexx.register.model.UserDTO;
 import com.flexx.register.service.IUserRegisterService;
+import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -23,7 +24,7 @@ public class UserRegisterController {
     }
 
     @PostMapping("/register")
-    ResponseEntity<String> register(@RequestBody UserDTO userDTO) {
+    ResponseEntity<String> register(@Valid @RequestBody UserDTO userDTO) {
         log.info("register user was called");
         service.registerUser(userDTO);
         return ResponseEntity.ok("created!");
